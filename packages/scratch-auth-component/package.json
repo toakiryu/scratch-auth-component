@@ -1,0 +1,36 @@
+{
+  "name": "scratch-auth-component",
+  "description": "Scratch Auth is a simple OAuth service for Scratch. It provides developers with an easy-to-understand API and users with a smooth login experience. By using @scratch-auth-component/nextjs, you can easily implement OAuth functionality into your site.",
+  "version": "0.0.1-beta.1",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir dist --copy-files",
+    "prepublishOnly": "npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Toa Kiryu <toakiryu@gmail.com> (https://toakiryu.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/toakiryu/scratch-auth-component.git",
+    "directory": "packages/nextjs"
+  },
+  "bugs": {
+    "url": "https://github.com/toakiryu/scartch-auth-component/issues",
+    "email": "toakiryu@gmail.com"
+  },
+  "homepage": "https://scratch-auth-component.vercel.app",
+  "license": "MIT",
+  "keywords": [
+    "scratch",
+    "oauth",
+    "authentication"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@babel/cli": "^7.22.5",
+    "@babel/preset-env": "^7.22.5"
+  }
+}
