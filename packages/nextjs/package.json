@@ -2,14 +2,21 @@
   "name": "@scratch-auth-component/nextjs",
   "description": "Scratch Auth is a simple OAuth service for Scratch. It provides developers with an easy-to-understand API and users with a smooth login experience. By using @scratch-auth-component/nextjs, you can easily implement OAuth functionality into your site.",
   "version": "0.0.1-beta.1",
-  "types": "dist/index.d.ts",
   "type": "module",
-  "exports": "./dist/index.js",
-  "files": [
-    "dist"
-  ],
+  "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./config": {
+      "types": "./dist/config.d.ts",
+      "import": "./dist/config.js"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "publishConfig": {
     "access": "public"
@@ -38,7 +45,7 @@
     "autoprefixer": "^10.4.20",
     "clsx": "^2.1.1",
     "lucide-react": "^0.469.0",
-    "next": "15.1.3",
+    "next": "^15.1.3",
     "postcss": "^8.4.49",
     "react": "^19.0.0",
     "uuid": "^11.0.3"
